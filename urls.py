@@ -2,9 +2,9 @@ class URLs:
 
     BASE_URL = 'https://stellarburgers.education-services.ru/'
 
-    ORDERS_LIST_URL = 'https://stellarburgers.education-services.ru/feed'
+    ORDERS_LIST_URL = f'{BASE_URL}feed'
 
-    REGISTER_URL = 'https://stellarburgers.education-services.ru/register'
+    REGISTER_URL = f'{BASE_URL}register'
 
-    LOGIN_URL = 'https://stellarburgers.education-services.ru/login'
+    LOGIN_URL = f'{BASE_URL}login'
 

@@ -22,7 +22,7 @@ class TestMainFunctions:
             orders_list_page.wait_for_load_orders_list_page()
 
         with allure.step('Проверка текущего URL'):
-            assert orders_list_page.driver.current_url == URLs.ORDERS_LIST_URL
+            assert orders_list_page.get_current_url() == URLs.ORDERS_LIST_URL
 
     @allure.title('Проверка перехода на раздел "Конструктор"')
     @allure.description('Тест проверяет переход на раздел "Конструктор" нажатием на кнопку перехода "Конструктор" на странице "Лента заказов"')
@@ -35,7 +35,7 @@ class TestMainFunctions:
             main_page.wait_for_load_main_page()
 
         with allure.step('Проверка текущего URL'):
-            assert main_page.driver.current_url == URLs.BASE_URL
+            assert orders_list_page.get_current_url() == URLs.BASE_URL
 
     @allure.title('Проверка появления всплывающего окна с деталями при нажатии на ингредиент')
     @allure.description('Тест проверяет появления всплывающего окна с деталями при нажатии на ингредиент(Флюоресцентная булка R2-D3) на главной странице сервиса')
@@ -50,7 +50,6 @@ class TestMainFunctions:
     @allure.description('Тест проверяет закрытие всплывающего окна с деталями ингредиента при нажатии на крестик в углу окна')
     def test_ingredient_details_window_closing(self, driver_main_page):
         main_page = MainPageObjects(driver_main_page)
-        base_page = BasePageObjects(driver_main_page)
 
         with allure.step('Открытие всплывающего окна "Детали ингредиента"'):
             main_page.click_ingredient_bun()

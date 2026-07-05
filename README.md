@@ -29,4 +29,4 @@ pytest -v tests/
 allure open allure_report
 
 ## Результат
-2 failed, 14 passed in 202.18s (0:03:22)
+2 failed, 14 passed in 171.42s (0:02:51)
